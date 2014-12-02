@@ -1,7 +1,7 @@
 Boundary CouchDB Plugin
 =======================
 
-The Boundary Riak plugin collects information on CouchDB.
+The Boundary CouchDB plugin collects information on CouchDB.
 
 The plugin requires the CouchDB [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats)
 to be accessible from the machine running the relay.
@@ -31,8 +31,6 @@ The information collected is what is returned by the [stats API](http://docs.cou
 6. Click on the _Uninstall_ button to perfom the actual uninstall and then click on the _Close_ button to dismiss the dialog.
 
 ## Configuration
-
-Once the CouchDB plugin is installed, metric collection requires that a _relay_ is installed on the target system. Instructions on how to install a relay for Linux/Unix can found [here](http://premium-documentation.boundary.com/relays), and for Windows [here](http://premium-support.boundary.com/customer/portal/articles/1656465-installing-relay-on-windows).
 
 Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint.  By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port.
 
