@@ -1,37 +1,58 @@
 Boundary CouchDB Plugin
-=======================
+-----------------------
 
-The Boundary CouchDB plugin collects information on CouchDB.
+**Awaiting Certification**
 
-The plugin requires the CouchDB [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats)
-to be accessible from the machine running the relay.
+The Boundary CouchDB plugin collects information on CouchDB. The information collected is what is returned by the [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats).
 
-The plugin requires Python 2.6 or later.
+### Prerequisites
 
-## Metrics
+- Python 2.6.6 or later
+- CouchDB [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats) to be accessible from the machine running the relay.
 
-The information collected is what is returned by the [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats).
+### Plugin Setup
+Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint. By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port.
 
-## Adding the CouchDB Plugin to Premium Boundary
+### Plugin Configuration
 
-1. Login into Boundary Premium
-2. Display the settings dialog by clicking on the _settings icon_: ![](src/main/resources/settings_icon.png)
-3. Click on the _Plugins_ in the settings dialog.
-4. Locate the _couchdb_ plugin item and click on the _Install_ button.
-5. A confirmation dialog is displayed indicating the plugin was installed successfully, along with the metrics and the dashboards.
-6. Click on the _OK_ button to dismiss the dialog.
 
-## Removing the CouchDB Plugin from Premium Boundary
+|Field Name       |Description                            |
+|:----------------|:--------------------------------------|
+|CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
 
-1. Login into Boundary Premium
-2. Display the settings dialog by clicking on the _settings icon_: ![](src/main/resources/settings_icon.png)
-3. Click on the _Plugins_ in the settings dialog which lists the installed plugins.
-4. Locate the _couchdb_ plugin and click on the item, which then displays the uninstall dialog.
-5. Click on the _Uninstall_ button which displays a confirmation dialog along with the details on what metrics and dashboards will be removed.
-6. Click on the _Uninstall_ button to perfom the actual uninstall and then click on the _Close_ button to dismiss the dialog.
+### Metrics Collected
 
-## Configuration
+|Metric Name                         |Description                                        |
+|:-----------------------------------|:--------------------------------------------------|
+|CouchDB - HTTPD 201                 |number of HTTP 201 Created responses               |
+|CouchDB - HTTPD 200                 |number of HTTP 200 OK responses                    |
+|CouchDB - HTTPD 202                 |number of HTTP 202 Accepted responses              |
+|CouchDB - HTTPD 401                 |number of HTTP 401 Unauthorized responses          |
+|CouchDB - HTTPD 301                 |number of HTTP 301 Moved Permanently responses     |
+|CouchDB - HTTPD 304                 |number of HTTP 304 Not Modified responses          |
+|CouchDB - HTTPD 405                 |number of HTTP 405 Method Not Allowed responses    |
+|CouchDB - HTTPD 404                 |number of HTTP 404 Not Found responses             |
+|CouchDB - HTTPD 403                 |number of HTTP 403 Forbidden responses             |
+|CouchDB - HTTPD 500                 |number of HTTP 500 Internal Server Error responses |
+|CouchDB - HTTPD 412                 |number of HTTP 412 Precondition Failed responses   |
+|CouchDB - HTTPD 400                 |number of HTTP 400 Bad Request responses           |
+|CouchDB - HTTPD 409                 |number of HTTP 409 Conflict responses              |
+|CouchDB - Bulk Requests             |number of bulk requests                            |
+|CouchDB - Clients Requesting Changes|number of clients for continuous _changes          |
+|CouchDB - View Reads                |number of view reads                               |
+|CouchDB - Requests                  |number of HTTP requests                            |
+|CouchDB - Temporary View Reads      |number of temporary view reads                     |
+|CouchDB - Open OS Files             |number of file descriptors CouchDB has open        |
+|CouchDB - Auth Cache Hits           |number of authentication cache hits                |
+|CouchDB - Database Reads            |number of times a document was read from a database|
+|CouchDB - Open Databases            |number of open databases                           |
+|CouchDB - Auth Cache Misses         |number of authentication cache misses              |
+|CouchDB - Database Writes           |number of times a database was changed             |
+|CouchDB - Request Time              |length of a request inside CouchDB without MochiWeb|
+|CouchDB - HEAD Requests             |number of HTTP HEAD requests                       |
+|CouchDB - GET Requests              |number of HTTP GET requests                        |
+|CouchDB - PUT Requests              |number of HTTP PUT requests                        |
+|CouchDB - POST Requests             |number of HTTP POST requests                       |
+|CouchDB - COPY Requests             |number of HTTP COPY requests                       |
+|CouchDB - DELETE Requests           |number of HTTP DELETE requests                     |
 
-Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint.  By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port.
-
-General operations for plugins are described in [this article](http://premium-support.boundary.com/customer/portal/articles/1635550-plugins---how-to).
