@@ -5,6 +5,13 @@ Boundary CouchDB Plugin
 
 The Boundary CouchDB plugin collects information on CouchDB. The information collected is what is returned by the [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats).
 
+### Platforms
+- Windows
+- Linux
+- OS X
+- SmartOS
+
+
 ### Prerequisites
 
 - Python 2.6.6 or later

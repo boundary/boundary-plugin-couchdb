@@ -3,7 +3,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of authentication cache hits",
+            "description": "Number of authentication cache hits",
             "displayName": "CouchDB - Auth Cache Hits",
             "displayNameShort": "CouchDB - AuCa Hit",
             "isDisabled": 0,
@@ -13,7 +13,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of authentication cache misses",
+            "description": "Number of authentication cache misses",
             "displayName": "CouchDB - Auth Cache Misses",
             "displayNameShort": "CouchDB - AuCa Miss",
             "isDisabled": 0,
@@ -23,7 +23,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of bulk requests",
+            "description": "Number of bulk requests",
             "displayName": "CouchDB - Bulk Requests",
             "displayNameShort": "CouchDB - Bulk Req",
             "isDisabled": 0,
@@ -33,7 +33,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of clients for continuous _changes",
+            "description": "Number of clients for continuous _changes",
             "displayName": "CouchDB - Clients Requesting Changes",
             "displayNameShort": "CouchDB - Chng Req",
             "isDisabled": 0,
@@ -43,7 +43,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP COPY requests",
+            "description": "Number of HTTP COPY requests",
             "displayName": "CouchDB - COPY Requests",
             "displayNameShort": "CouchDB - COPY Req",
             "isDisabled": 0,
@@ -53,7 +53,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of times a document was read from a database",
+            "description": "Number of times a document was read from a database",
             "displayName": "CouchDB - Database Reads",
             "displayNameShort": "CouchDB - DB Reads",
             "isDisabled": 0,
@@ -63,7 +63,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of times a database was changed",
+            "description": "Number of times a database was changed",
             "displayName": "CouchDB - Database Writes",
             "displayNameShort": "CouchDB - DB Writes",
             "isDisabled": 0,
@@ -73,7 +73,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP DELETE requests",
+            "description": "Number of HTTP DELETE requests",
             "displayName": "CouchDB - DELETE Requests",
             "displayNameShort": "CouchDB - DELETE Rq",
             "isDisabled": 0,
@@ -93,7 +93,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP HEAD requests",
+            "description": "Number of HTTP HEAD requests",
             "displayName": "CouchDB - HEAD Requests",
             "displayNameShort": "CouchDB - HEAD Req",
             "isDisabled": 0,
@@ -103,7 +103,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 200 OK responses",
+            "description": "Number of HTTP 200 OK responses",
             "displayName": "CouchDB - HTTPD 200",
             "displayNameShort": "CouchDB - HTTPD 200",
             "isDisabled": 0,
@@ -123,7 +123,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 202 Accepted responses",
+            "description": "Number of HTTP 202 Accepted responses",
             "displayName": "CouchDB - HTTPD 202",
             "displayNameShort": "CouchDB - HTTPD 202",
             "isDisabled": 0,
@@ -133,7 +133,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 301 Moved Permanently responses",
+            "description": "Number of HTTP 301 Moved Permanently responses",
             "displayName": "CouchDB - HTTPD 301",
             "displayNameShort": "CouchDB - HTTPD 301",
             "isDisabled": 0,
@@ -143,7 +143,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 304 Not Modified responses",
+            "description": "Number of HTTP 304 Not Modified responses",
             "displayName": "CouchDB - HTTPD 304",
             "displayNameShort": "CouchDB - HTTPD 304",
             "isDisabled": 0,
@@ -153,7 +153,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 400 Bad Request responses",
+            "description": "Number of HTTP 400 Bad Request responses",
             "displayName": "CouchDB - HTTPD 400",
             "displayNameShort": "CouchDB - HTTPD 400",
             "isDisabled": 0,
@@ -163,7 +163,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 401 Unauthorized responses",
+            "description": "Number of HTTP 401 Unauthorized responses",
             "displayName": "CouchDB - HTTPD 401",
             "displayNameShort": "CouchDB - HTTPD 401",
             "isDisabled": 0,
@@ -173,7 +173,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 403 Forbidden responses",
+            "description": "Number of HTTP 403 Forbidden responses",
             "displayName": "CouchDB - HTTPD 403",
             "displayNameShort": "CouchDB - HTTPD 403",
             "isDisabled": 0,
@@ -183,7 +183,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 404 Not Found responses",
+            "description": "Number of HTTP 404 Not Found responses",
             "displayName": "CouchDB - HTTPD 404",
             "displayNameShort": "CouchDB - HTTPD 404",
             "isDisabled": 0,
@@ -193,7 +193,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 405 Method Not Allowed responses",
+            "description": "Number of HTTP 405 Method Not Allowed responses",
             "displayName": "CouchDB - HTTPD 405",
             "displayNameShort": "CouchDB - HTTPD 405",
             "isDisabled": 0,
@@ -203,7 +203,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 409 Conflict responses",
+            "description": "Number of HTTP 409 Conflict responses",
             "displayName": "CouchDB - HTTPD 409",
             "displayNameShort": "CouchDB - HTTPD 409",
             "isDisabled": 0,
@@ -213,7 +213,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 412 Precondition Failed responses",
+            "description": "Number of HTTP 412 Precondition Failed responses",
             "displayName": "CouchDB - HTTPD 412",
             "displayNameShort": "CouchDB - HTTPD 412",
             "isDisabled": 0,
@@ -223,7 +223,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP 500 Internal Server Error responses",
+            "description": "Number of HTTP 500 Internal Server Error responses",
             "displayName": "CouchDB - HTTPD 500",
             "displayNameShort": "CouchDB - HTTPD 500",
             "isDisabled": 0,
@@ -233,7 +233,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of open databases",
+            "description": "Number of open databases",
             "displayName": "CouchDB - Open Databases",
             "displayNameShort": "CouchDB - Open DB",
             "isDisabled": 0,
@@ -243,7 +243,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of file descriptors CouchDB has open",
+            "description": "Number of file descriptors CouchDB has open",
             "displayName": "CouchDB - Open OS Files",
             "displayNameShort": "CouchDB - Open Fls",
             "isDisabled": 0,
@@ -253,7 +253,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP POST requests",
+            "description": "Number of HTTP POST requests",
             "displayName": "CouchDB - POST Requests",
             "displayNameShort": "CouchDB - POST Req",
             "isDisabled": 0,
@@ -263,7 +263,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP PUT requests",
+            "description": "Number of HTTP PUT requests",
             "displayName": "CouchDB - PUT Requests",
             "displayNameShort": "CouchDB - PUT Req",
             "isDisabled": 0,
@@ -273,7 +273,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "length of a request inside CouchDB without MochiWeb",
+            "description": "Length of a request inside CouchDB without MochiWeb",
             "displayName": "CouchDB - Request Time",
             "displayNameShort": "CouchDB - Req Time",
             "isDisabled": 0,
@@ -283,7 +283,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of HTTP requests",
+            "description": "Number of HTTP requests",
             "displayName": "CouchDB - Requests",
             "displayNameShort": "CouchDB - Requests",
             "isDisabled": 0,
@@ -293,7 +293,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of temporary view reads",
+            "description": "Number of temporary view reads",
             "displayName": "CouchDB - Temporary View Reads",
             "displayNameShort": "CouchDB - TmpVw Rd",
             "isDisabled": 0,
@@ -303,7 +303,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "number of view reads",
+            "description": "Number of view reads",
             "displayName": "CouchDB - View Reads",
             "displayNameShort": "CouchDB - View Read",
             "isDisabled": 0,

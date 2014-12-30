@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2014 Boundary, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,31 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-__data = dict()
+if [ $# -ne 1 ]
+then
+  echo "usage: $(basename $0) <database>" >&2 
+  exit 1
+fi
 
-
-def accumulate(key, new_value):
-    global __data
-
-    try:
-        old_value = __data[key]
-    except KeyError:
-        old_value = new_value
-
-    diff = new_value - old_value
-    __data[key] = new_value
-    return diff
-
-
-def reset(key):
-    global __data
-
-    try:
-        del __data[key]
-    except KeyError:
-        pass
-
-
-def reset_all():
-    global __data
-    __data = {}
+http GET "http://127.0.0.1:5984/$1/_all_docs"
