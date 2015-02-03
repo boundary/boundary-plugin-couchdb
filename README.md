@@ -5,23 +5,23 @@ Boundary CouchDB Plugin
 
 The Boundary CouchDB plugin collects information on CouchDB. The information collected is what is returned by the [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats).
 
-### Platforms
-- Windows
-- Linux
-- OS X
-- SmartOS
-
-
 ### Prerequisites
 
-- Python 2.6.6 or later
+|     OS    | Linux | Windows | SmartOS | OS X |
+|:----------|:-----:|:-------:|:-------:|:----:|
+| Supported |   v   |    v    |    v    |  v   |
+
+|  Runtime | node.js | Python | Java |
+|:---------|:-------:|:------:|:----:|
+| Required |         |    +   |      |
+
 - CouchDB [stats API](http://docs.couchdb.org/en/1.6.1/api/server/common.html#stats) to be accessible from the machine running the relay.
+- [How to install Python?](https://help.boundary.com/hc/articles/202270132)
 
 ### Plugin Setup
 Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint. By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port.
 
-### Plugin Configuration
-
+#### Plugin Configuration
 
 |Field Name       |Description                            |
 |:----------------|:--------------------------------------|
