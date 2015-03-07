@@ -3,6 +3,10 @@
 --
 local tools = {}
 
+
+-- Requires.
+local string = require('string')
+
 --
 -- Limit a given number x between two boundaries.
 -- Either min or max can be nil, to fence on one side only.
