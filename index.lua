@@ -1,41 +1,22 @@
 -- [boundary.com] CouchDB Lua Plugin
 -- [author] Ivano Picco <ivano.picco@pianobit.com>
 
--- Requires.
+-- Common requires.
 local utils = require('utils')
-local uv_native = require ('uv_native')
-local string = require('string')
 local timer = require('timer')
-local ffi = require ('ffi')
 local fs = require('fs')
 local json = require('json')
 local os = require ('os')
 local tools = require ('tools')
-
-local url  = require('url')
-local http  = require('http')
 
 local success, boundary = pcall(require,'boundary')
 if (not success) then
   boundary = nil 
 end
 
-local isWindows = os.type() == 'win32'
-
--- portable gethostname syscall
-ffi.cdef [[
-  int gethostname (char *, int);
-]]
-function gethostname()
-  local buf = ffi.new("uint8_t[?]", 256)
-  if ( not isWindows ) then 
-    ffi.C.gethostname(buf,256)
-  else
-    local clib = ffi.load('ws2_32')
-    clib.gethostname(buf,256)
-  end
-  return ffi.string(buf)
-end
+-- Business requires.
+local url  = require('url')
+local http  = require('http')
 
 -- Default parameters.
 local source       = nil
@@ -53,7 +34,7 @@ _parameters.pollInterval =
 
 _parameters.source =
   (type(_parameters.source) == 'string' and _parameters.source:gsub('%s+', '') ~= '' and _parameters.source ~= nil and _parameters.source) or
-  gethostname()
+  os.hostname()
 
 _parameters.host = 
   (type(_parameters.host) == 'string' and _parameters.host:gsub('%s+', '') ~= '' and _parameters.host) or 
