@@ -42,12 +42,14 @@ Before the plugin will collect metrics, you must provide it with the URL used to
 |User           |Password for the server.                                    |
 |Password       |Password for the server.                                    |
 
-#### For Boundary Meter less than V4.0
+#### For All Versions
 |Field Name       |Description                            |
 |:----------------|:--------------------------------------|
 |CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
 
 ### Metrics Collected
+
+#### For All Versions
 
 |Metric Name                         |Description                                        |
 |:-----------------------------------|:--------------------------------------------------|
@@ -65,7 +67,7 @@ Before the plugin will collect metrics, you must provide it with the URL used to
 |CouchDB - HTTPD 400                 |number of HTTP 400 Bad Request responses           |
 |CouchDB - HTTPD 409                 |number of HTTP 409 Conflict responses              |
 |CouchDB - Bulk Requests             |number of bulk requests                            |
-|CouchDB - Clients Requesting Changes|number of clients for continuous _changes          |
+|CouchDB - Clients Requesting Changes|number of clients for continuous changes           |
 |CouchDB - View Reads                |number of view reads                               |
 |CouchDB - Requests                  |number of HTTP requests                            |
 |CouchDB - Temporary View Reads      |number of temporary view reads                     |
