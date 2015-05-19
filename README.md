@@ -7,16 +7,16 @@ The Boundary CouchDB plugin collects information on CouchDB. The information col
 
 ### Prerequisites
 
+#### Supported OS
+
 |     OS    | Linux | Windows | SmartOS | OS X |
 |:----------|:-----:|:-------:|:-------:|:----:|
 | Supported |   v   |    v    |    v    |  v   |
 
-#### For Boundary Meter V4.0
-(to update/download - curl -fsS -d '{"token":"api.<Your API Key Here>"}' -H 'Content-Type: application/json' https://meter.boundary.com/setup_meter > setup_meter.sh && chmod +x setup_meter.sh && ./setup_meter.sh)
+#### Boundary Meter V4.0 or later
 
-|  Runtime | node.js | Python | Java |
-|:---------|:-------:|:------:|:----:|
-| Required |         |        |      |
+- To install new meter go to Settings->Installation or [see instructons](https://help.boundary.com/hc/en-us/sections/200634331-Installation). 
+- To upgrade the meter to the latest version - [see instructons](https://help.boundary.com/hc/en-us/articles/201573102-Upgrading-the-Boundary-Meter).
 
 #### For Boundary Meter less than V4.0
 
@@ -28,19 +28,9 @@ The Boundary CouchDB plugin collects information on CouchDB. The information col
 - [How to install Python?](https://help.boundary.com/hc/articles/202270132)
 
 ### Plugin Setup
-Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint. By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port.
+Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint. By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port. If your intallation requires a username and password to access the stats page, you can specify them in the url. For example: "http://admin:password@127.0.0.1:5984/_stats"
 
 #### Plugin Configuration
-
-#### For Boundary Meter V4.0
-|Field Name     |Description                                                 |
-|:--------------|:-----------------------------------------------------------|
-|Source         |The source to display in the legend for the instance.       |
-|PollInterval   |Interval to query couchdb                                   |
-|Port           |The server port (default 5984).                             |
-|Host           |The server host (default 127.0.0.1).                        |
-|User           |Password for the server.                                    |
-|Password       |Password for the server.                                    |
 
 #### For All Versions
 |Field Name       |Description                            |
@@ -84,4 +74,5 @@ Before the plugin will collect metrics, you must provide it with the URL used to
 |CouchDB - POST Requests             |number of HTTP POST requests                       |
 |CouchDB - COPY Requests             |number of HTTP COPY requests                       |
 |CouchDB - DELETE Requests           |number of HTTP DELETE requests                     |
+
 

@@ -28,6 +28,7 @@ local params = framework.params
 params.name = 'Boundary CouchDB Plugin' 
 params.version = '2.0'
 params.tags = 'couchdb'
+params.stats_url = notEmpty(params.stats_url, 'http://127.0.0.1:5984/_stats')
 
 local acc = Accumulator:new()
 local ds = WebRequestDataSource:new(params.stats_url)
