@@ -1,6 +1,8 @@
 {
     "description": "Monitors CouchDB",
     "command": "python -u plugin.py",
+    "command_lua" : "boundary-meter index.lua",
+    "postExtract_lua" : "",
     "icon" : "icon.png",
     "metrics" : [
         "COUCHDB_HTTPD_201",

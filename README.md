@@ -11,6 +11,15 @@ The Boundary CouchDB plugin collects information on CouchDB. The information col
 |:----------|:-----:|:-------:|:-------:|:----:|
 | Supported |   v   |    v    |    v    |  v   |
 
+#### For Boundary Meter V4.0
+(to update/download - curl -fsS -d '{"token":"api.<Your API Key Here>"}' -H 'Content-Type: application/json' https://meter.boundary.com/setup_meter > setup_meter.sh && chmod +x setup_meter.sh && ./setup_meter.sh)
+
+|  Runtime | node.js | Python | Java |
+|:---------|:-------:|:------:|:----:|
+| Required |         |        |      |
+
+#### For Boundary Meter less than V4.0
+
 |  Runtime | node.js | Python | Java |
 |:---------|:-------:|:------:|:----:|
 | Required |         |    +   |      |
@@ -23,6 +32,17 @@ Before the plugin will collect metrics, you must provide it with the URL used to
 
 #### Plugin Configuration
 
+#### For Boundary Meter V4.0
+|Field Name     |Description                                                 |
+|:--------------|:-----------------------------------------------------------|
+|Source         |The source to display in the legend for the instance.       |
+|PollInterval   |Interval to query couchdb                                   |
+|Port           |The server port (default 5984).                             |
+|Host           |The server host (default 127.0.0.1).                        |
+|User           |Password for the server.                                    |
+|Password       |Password for the server.                                    |
+
+#### For Boundary Meter less than V4.0
 |Field Name       |Description                            |
 |:----------------|:--------------------------------------|
 |CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
