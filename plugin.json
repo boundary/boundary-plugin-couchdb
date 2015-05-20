@@ -1,7 +1,7 @@
 {
     "description": "Monitors CouchDB",
     "command": "python -u plugin.py",
-    "command_lua" : "boundary-meter index.lua",
+    "command_lua" : "boundary-meter init.lua",
     "postExtract_lua" : "",
     "icon" : "icon.png",
     "metrics" : [
@@ -43,12 +43,38 @@
 
     "paramSchema": [
         {
+           "title" : "Poll Interval",
+            "name" : "pollInterval",
+            "description" : "The Poll Interval in milliseconds. Ex. 1000",
+            "type" : "number",
+            "default" : 1000,
+            "required" : false
+        },
+        {
+            "title" : "Source",
+            "name" : "source",
+            "description" : "The Source to display in the legend for the couchdb data. It will default to the hostname of the server",
+            "type" : "string"
+        },
+        {
             "title": "CouchDB Stats URL",
             "name": "stats_url",
-            "description": "The URL to CouchDB's stats API endpoint",
+            "description": "The URL to CouchDB's stats API endpoint.",
             "type": "string",
             "default": "http://127.0.0.1:5984/_stats",
             "required": true
+        },
+        {
+            "title" : "Username",
+            "name" : "username",
+            "description" : "If the endpoint is password protected, what username should we use when calling it.",
+            "type" : "string"
+        },
+        {
+            "title" : "Password",
+            "name" : "password",
+            "description" : "If the endpoint is password protected, what password should we use when calling it.",
+            "type" : "password"
         }
     ]
 }
