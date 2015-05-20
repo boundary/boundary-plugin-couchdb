@@ -17,21 +17,25 @@
 
 local framework = require('framework')
 local url = require('url')
+local json = require('json')
 local Plugin = framework.Plugin
 local WebRequestDataSource = framework.WebRequestDataSource
 local Accumulator = framework.Accumulator
 local notEmpty = framework.string.notEmpty
-local json = require('json')
-local compose = framework.functional.compose
+local auth = framework.util.auth
 
 local params = framework.params
 params.name = 'Boundary CouchDB Plugin' 
 params.version = '2.0'
 params.tags = 'couchdb'
-params.stats_url = notEmpty(params.stats_url, 'http://127.0.0.1:5984/_stats')
+
+params.stats_url = notEmpty(params.stats_url, "http://127.0.0.1:5984/_stats")
+
+local options = url.parse(params.stats_url)
+options.auth = auth(params.username, params.password)
 
 local acc = Accumulator:new()
-local ds = WebRequestDataSource:new(params.stats_url)
+local ds = WebRequestDataSource:new(options)
 local plugin = Plugin:new(params, ds)
 function plugin:onParseValues(data)
   local parsed = json.parse(data)

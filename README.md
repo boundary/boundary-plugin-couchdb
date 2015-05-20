@@ -28,11 +28,20 @@ The Boundary CouchDB plugin collects information on CouchDB. The information col
 - [How to install Python?](https://help.boundary.com/hc/articles/202270132)
 
 ### Plugin Setup
-Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint. By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port. If your intallation requires a username and password to access the stats page, you can specify them in the url. For example: "http://admin:password@127.0.0.1:5984/_stats"
+Before the plugin will collect metrics, you must provide it with the URL used to access the CouchDB stats endpoint. By default, this is "http://127.0.0.1:5984/_stats", but it could be different if you have configured a different port.
 
 #### Plugin Configuration
 
-#### For All Versions
+#### For Boundary Meter V4.0
+|Field Name     |Description                                                 |
+|:--------------|:-----------------------------------------------------------|
+|Source         |The source to display in the legend for the instance.       |
+|PollInterval   |Interval to query couchdb                                   |
+|CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
+|User           |Password for the stats API endpoint.                                    |
+|Password       |Password for the stats API endpoint.                                    |
+
+#### For Boundary Meter less than V4.0
 |Field Name       |Description                            |
 |:----------------|:--------------------------------------|
 |CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
