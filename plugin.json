@@ -1,4 +1,7 @@
 {
+    "name" : "Boundary CouchDB Plugin",
+    "version" : "2.0",
+    "tags" : "couchdb",
     "description": "Monitors CouchDB",
     "command": "python -u plugin.py",
     "command_lua" : "boundary-meter init.lua",
