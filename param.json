@@ -1,0 +1,6 @@
+{
+  "stats_url": "http://127.0.0.1:5984/_stats",
+  "username": "Administrator",
+  "password": "123456",
+  "pollInterval": 5000
+}
