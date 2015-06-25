@@ -48,10 +48,10 @@
 
     "paramSchema": [
         {
-           "title" : "Poll Interval",
+           "title" : "Poll Interval (ms)",
             "name" : "pollInterval",
-            "description" : "The Poll Interval in milliseconds. Ex. 1000",
-            "type" : "number",
+            "description" : "The Poll Interval (in milliseconds). Ex. 1000",
+            "type" : "integer",
             "default" : 1000,
             "required" : false
         },
