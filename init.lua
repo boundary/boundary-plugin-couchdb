@@ -39,7 +39,11 @@ function plugin:onParseValues(data, extra)
     self:emitEvent('error', ('Http Response Status Code %d. Please check the CouchDB endpoint configuration.'):format(extra.status_code))
     return
   end
-  local parsed = json.parse(data)
+  local success, parsed = pcall(json.parse, data)
+  if not succes then
+    self:emitEvent('error', 'Can not parse metrics. Please check the CouchDB endpoint configuration.')
+    return
+  end
   local httpd_status_codes = parsed.httpd_status_codes
   local httpd = parsed.httpd
   local couchdb = parsed.couchdb
