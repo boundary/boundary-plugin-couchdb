@@ -1,8 +1,8 @@
 {
     "name" : "Boundary CouchDB Plugin",
-    "version" : "0.9.0",
+    "version" : "0.9.1",
     "meterVersionRequired" : "4.2.0-611",
-    "os" : [ "Linux", "Windows", "SmartOS", "OS X" ],
+    "unsupportedPlatforms" : [ ],
     "tags" : "couchdb",
     "description": "Monitors CouchDB",
     "command": "python -u plugin.py",
