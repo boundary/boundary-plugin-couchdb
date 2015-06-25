@@ -23,6 +23,7 @@ local WebRequestDataSource = framework.WebRequestDataSource
 local Accumulator = framework.Accumulator
 local notEmpty = framework.string.notEmpty
 local auth = framework.util.auth
+local isHttpSuccess = framework.util.isHttpSuccess
 
 local params = framework.params
 params.stats_url = notEmpty(params.stats_url, "http://127.0.0.1:5984/_stats")
@@ -33,8 +34,16 @@ options.auth = auth(params.username, params.password)
 local acc = Accumulator:new()
 local ds = WebRequestDataSource:new(options)
 local plugin = Plugin:new(params, ds)
-function plugin:onParseValues(data)
-  local parsed = json.parse(data)
+function plugin:onParseValues(data, extra)
+  if not isHttpSuccess(extra.status_code) then
+    self:emitEvent('error', ('Http Response Status Code %d. Please check the CouchDB endpoint configuration.'):format(extra.status_code))
+    return
+  end
+  local success, parsed = pcall(json.parse, data)
+  if not succes then
+    self:emitEvent('error', 'Can not parse metrics. Please check the CouchDB endpoint configuration.')
+    return
+  end
   local httpd_status_codes = parsed.httpd_status_codes
   local httpd = parsed.httpd
   local couchdb = parsed.couchdb
