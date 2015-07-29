@@ -40,7 +40,7 @@ function plugin:onParseValues(data, extra)
     return
   end
   local success, parsed = pcall(json.parse, data)
-  if not succes then
+  if not success then
     self:emitEvent('error', 'Can not parse metrics. Please check the CouchDB endpoint configuration.')
     return
   end
