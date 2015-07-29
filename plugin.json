@@ -59,7 +59,8 @@
             "title" : "Source",
             "name" : "source",
             "description" : "The Source to display in the legend for the couchdb data. It will default to the hostname of the server",
-            "type" : "string"
+            "type" : "string",
+	    "required" : false
         },
         {
             "title": "CouchDB Stats URL",
@@ -73,13 +74,15 @@
             "title" : "Username",
             "name" : "username",
             "description" : "If the endpoint is password protected, what username should we use when calling it.",
-            "type" : "string"
+            "type" : "string",
+	    "required" : false
         },
         {
             "title" : "Password",
             "name" : "password",
             "description" : "If the endpoint is password protected, what password should we use when calling it.",
-            "type" : "password"
+            "type" : "password",
+	    "required" : false
         }
     ]
 }
