@@ -47,22 +47,7 @@
 "d-w=4&d-h=3&d-pad=5&d-bg=none&d-g-COUCHDB_REQUESTS=0-0-1-1&d-g-COUCHDB_REQUEST_TIME=1-0-1-1&d-g-COUCHDB_OPEN_DATABASES=0-1-1-1-t&d-g-COUCHDB_OPEN_OS_FILES=0-1-1-1-b&d-g-COUCHDB_TEMPORARY_VIEW_READS=1-1-1-1-t&d-g-COUCHDB_VIEW_READS=1-1-1-1-b&d-g-COUCHDB_AUTH_CACHE_HITS=2-0-1-1-t&d-g-COUCHDB_AUTH_CACHE_MISSES=2-0-1-1-b&d-g-COUCHDB_HTTPD_BULK_REQUESTS=2-1-1-1&d-g-COUCHDB_CLIENTS_REQUESTING_CHANGES=3-0-1-1&d-g-COUCHDB_REQUEST_COPY=3-1-1-1&d-g-COUCHDB_DATABASE_READS=0-2-1-1-t&d-g-COUCHDB_DATABASE_WRITES=0-2-1-1-b&d-g-COUCHDB_REQUEST_DELETE=1-2-1-1&d-g-COUCHDB_REQUEST_GET=2-2-1-1&d-g-COUCHDB_REQUEST_HEAD=3-2-1-1" }],
 
     "paramSchema": [
-        {
-           "title" : "Poll Interval (ms)",
-            "name" : "pollInterval",
-            "description" : "The Poll Interval (in milliseconds). Ex. 1000",
-            "type" : "integer",
-            "default" : 1000,
-            "required" : false
-        },
-        {
-            "title" : "Source",
-            "name" : "source",
-            "description" : "The Source to display in the legend for the couchdb data. It will default to the hostname of the server",
-            "type" : "string",
-	    "required" : false
-        },
-        {
+       {
             "title": "CouchDB Stats URL",
             "name": "stats_url",
             "description": "The URL to CouchDB's stats API endpoint.",
@@ -82,6 +67,21 @@
             "name" : "password",
             "description" : "If the endpoint is password protected, what password should we use when calling it.",
             "type" : "password",
+	    "required" : false
+        },
+        {
+           "title" : "Poll Interval (ms)",
+            "name" : "pollInterval",
+            "description" : "The Poll Interval (in milliseconds). Ex. 1000",
+            "type" : "integer",
+            "default" : 1000,
+            "required" : false
+        },
+        {
+            "title" : "Source",
+            "name" : "source",
+            "description" : "The Source to display in the legend for the couchdb data. It will default to the hostname of the server",
+            "type" : "string",
 	    "required" : false
         }
     ]
