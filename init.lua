@@ -17,13 +17,13 @@
 
 local framework = require('framework')
 local url = require('url')
-local json = require('json')
 local Plugin = framework.Plugin
 local WebRequestDataSource = framework.WebRequestDataSource
 local Accumulator = framework.Accumulator
 local notEmpty = framework.string.notEmpty
 local auth = framework.util.auth
 local isHttpSuccess = framework.util.isHttpSuccess
+local parseJson = framework.util.parseJson
 
 local params = framework.params
 params.stats_url = notEmpty(params.stats_url, "http://127.0.0.1:5984/_stats")
@@ -39,7 +39,7 @@ function plugin:onParseValues(data, extra)
     self:emitEvent('error', ('Http Response Status Code %d. Please check the CouchDB endpoint configuration.'):format(extra.status_code))
     return
   end
-  local success, parsed = pcall(json.parse, data)
+  local success, parsed = parseJson(data)
   if not success then
     self:emitEvent('error', 'Can not parse metrics. Please check the CouchDB endpoint configuration.')
     return
