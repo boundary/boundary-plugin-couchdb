@@ -12,8 +12,8 @@ The Boundary CouchDB plugin collects information on CouchDB. The information col
 
 #### Boundary Meter v4.2 or later
 
-- To install new meter go to Settings->Installation or [see instructons](https://help.boundary.com/hc/en-us/sections/200634331-Installation). 
-- To upgrade the meter to the latest version - [see instructons](https://help.boundary.com/hc/en-us/articles/201573102-Upgrading-the-Boundary-Meter).
+- To install new meter go to Settings->Installation or [see instructions](https://help.boundary.com/hc/en-us/sections/200634331-Installation). 
+- To upgrade the meter to the latest version - [see instructions](https://help.boundary.com/hc/en-us/articles/201573102-Upgrading-the-Boundary-Meter).
 
 #### For Boundary Meter less than V4.0
 
@@ -32,13 +32,14 @@ Before the plugin will collect metrics, you must provide it with the URL used to
 #### For Boundary Meter v4.2
 |Field Name     |Description                                                 |
 |:--------------|:-----------------------------------------------------------|
-|Source         |The source to display in the legend for the instance.       |
-|PollInterval   |Interval to query couchdb                                   |
 |CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
 |User           |Password for the stats API endpoint.                                    |
 |Password       |Password for the stats API endpoint.                                    |
+|PollInterval   |Interval to query couchdb                                   |
+|Source         |The source to display in the legend for the instance.       |
 
 #### For Boundary Meter earlier than v4.2
+
 |Field Name       |Description                            |
 |:----------------|:--------------------------------------|
 |CouchDB Stats URL|The URL to CouchDB's stats API endpoint|
