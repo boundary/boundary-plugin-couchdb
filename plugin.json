@@ -1,6 +1,6 @@
 {
-    "name" : "Boundary CouchDB Plugin",
-    "version" : "0.9.1",
+    "name" : "TrueSight Pulse CouchDB Plugin",
+    "version" : "0.9.2",
     "meterVersionRequired" : "4.2.0-611",
     "unsupportedPlatforms" : [ ],
     "tags" : "couchdb",
@@ -8,6 +8,7 @@
     "command": "python -u plugin.py",
     "command_lua" : "boundary-meter init.lua",
     "postExtract_lua" : "",
+    "secure": true,
     "icon" : "icon.png",
     "metrics" : [
         "COUCHDB_HTTPD_201",
