@@ -25,7 +25,16 @@ local auth = framework.util.auth
 local isHttpSuccess = framework.util.isHttpSuccess
 local parseJson = framework.util.parseJson
 
-local params = framework.params
+--local params = framework.params
+local json = require('json')
+local env = require('env')
+
+local params = env.get("TSP_PLUGIN_PARAMS")
+if(params == nil or  params == '') then
+   params = framework.params
+else
+   params = json.parse(params)
+end
 params.stats_url = notEmpty(params.stats_url, "http://127.0.0.1:5984/_stats")
 
 local options = url.parse(params.stats_url)
